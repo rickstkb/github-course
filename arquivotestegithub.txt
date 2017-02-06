@@ -350,3 +350,58 @@ To https://github.com/rickstkb/github-course.git
  * [new branch]      master -> master
 
 
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arquivotestegithub.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -am "Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add"
+[master fae7ad1] Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+ 1 file changed, 80 insertions(+), 1 deletion(-)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git log
+commit fae7ad1e9a02105510f17fc0a4acb64683e88bfe
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:28:07 2017 -0200
+
+    Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+
+commit 992736350a57a43c28ec4d049a410b4c2b30af56
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:09:51 2017 -0200
+
+    Subindo td que fiz ate agora
+
+commit f038899138813e4a722a92af6eba93e65cf68139
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:00:34 2017 -0200
+
+    Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+
+commit 5b33d5ac3d1e1991edb4029d4227e639ba3a8ecb
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 19:54:25 2017 -0200
+
+    Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.16 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/rickstkb/github-course.git
+   9927363..fae7ad1  master -> master
+
+
