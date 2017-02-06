@@ -2,3 +2,5 @@ teste no github etapa untracked files
 
 primeira modificaçao apos o primeiro add
 
+Logo abaixo, irei colocar toda a sequencia do que foi estudado no curso ate agora. 
+
