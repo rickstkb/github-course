@@ -4,3 +4,270 @@ primeira modificaçao apos o primeiro add
 
 Logo abaixo, irei colocar toda a sequencia do que foi estudado no curso ate agora. 
 
+-- Até a parte "O ciclo de vida dos status e seus arquivos, tive todos os passos abaixo no bash";
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config --global user.name "Henrique Trindade"
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config --global user.email "rickstkb@gmail.com"
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config --global core.editor sublime
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config user.name
+Henrique Trindade
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config user.email
+rickstkb@gmail.com
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+credential.helper=manager
+difftool.usebuiltin=true
+user.name=Henrique Trindade
+user.email=rickstkb@gmail.com
+core.editor=sublime
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ mkdir git-course
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ cd git-course/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course
+$ git init
+Initialized empty Git repository in C:/Users/h.trindade/git-course/.git/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ C:/Users/h.trindade/git-course/.git/
+bash: C:/Users/h.trindade/git-course/.git/: Is a directory
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ ls -la
+total 16
+drwxr-xr-x 1 h.trindade 1049089 0 fev  6 19:01 ./
+drwxr-xr-x 1 h.trindade 1049089 0 fev  6 19:00 ../
+drwxr-xr-x 1 h.trindade 1049089 0 fev  6 19:01 .git/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ cd .git/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course/.git (GIT_DIR!)
+$ ls
+config  description  HEAD  hooks/  info/  objects/  refs/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course/.git (GIT_DIR!)
+$ cd..
+bash: cd..: command not found
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course/.git (GIT_DIR!)
+$ cd
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ dir
+Ambiente\ de\ impressão
+Ambiente\ de\ rede
+AppData
+Application\ Data
+casadocodigo
+Configurações\ locais
+Contacts
+Cookies
+Dados\ de\ aplicativos
+Desktop
+Documents
+Downloads
+Dropbox
+Evernote
+Favorites
+git-course
+Google\ Drive
+Links
+Menu\ Iniciar
+Meus\ documentos
+Modelos
+Music
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001                                                                                                                .regtrans-ms
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002                                                                                                                .regtrans-ms
+ntuser.ini
+ntuser.pol
+Pictures
+Recent
+Roaming
+Saved\ Games
+Searches
+SendTo
+Tracing
+Videos
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ cd git-course/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .vscode/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ vscode teste.md
+bash: vscode: command not found
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git config --global core.editor vscode
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ vscode teste.md
+bash: vscode: command not found
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ vscode readme.md
+bash: vscode: command not found
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .vscode/
+        arquivotestegithub.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git add arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arquivotestegithub.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .vscode/
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arquivotestegithub.txt
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arquivotestegithub.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arquivotestegithub.txt
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git add arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arquivotestegithub.txt
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -m "Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt"                                                                          [master (root-commit) 5b33d5a] Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+ 1 file changed, 4 insertions(+)
+ create mode 100644 arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arquivotestegithub.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git add arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   arquivotestegithub.txt
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -m "Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit"
+[master f038899] Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+ 1 file changed, 2 insertions(+)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$
+
+
