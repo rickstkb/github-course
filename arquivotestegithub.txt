@@ -268,6 +268,85 @@ $ git commit -m "Agora fiz um commit snapshot com o que tem dentro da pasta pore
  1 file changed, 2 insertions(+)
 
 h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
-$
+$ git add arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -m "Subindo td que fiz ate agora"
+[master 9927363] Subindo td que fiz ate agora
+ 1 file changed, 267 insertions(+)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin git@github.com:
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin git@github.com:rickstkb/github-course.git
+fatal: remote origin already exists.
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote remove origin
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin git@github.com:rickstkb/github-course.git
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote
+origin
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote -v
+origin  git@github.com:rickstkb/github-course.git (fetch)
+origin  git@github.com:rickstkb/github-course.git (push)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git push -u origin master
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remove origin
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+        remote
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote remove origin
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote -v
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin https://github.com/rickstkb/github-course.git
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin https://github.com/rickstkb/github-course.git
+fatal: remote origin already exists.
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git push -u origin master
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.55 KiB | 0 bytes/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+Branch master set up to track remote branch master from origin.
+To https://github.com/rickstkb/github-course.git
+ * [new branch]      master -> master
 
 
