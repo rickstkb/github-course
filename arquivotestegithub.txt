@@ -683,4 +683,44 @@ index 73855b5..1a7bbc5 100644
 +
 (END)
 
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git diff
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git diff --name-only
+
+
+git checkout nome do arquivo   -- desfaz uma modificaçao antes de da um commit e subir a modificação no repositorio remoto
+
+Nesse momento quando for dado um git diff não é apontada nenhuma modificaçao nos arquivos 
+
+git add nome do arquivo -- pra passar o arquivo pra staged 
+
+
+git reset HEAD nome do arquivo -- tirando da fila do staged pra commit em seguida 
+
+git commit -am "mensagem do commit" -- subir o commit direto no repositorio sem passar por algumas etapas (staged) etc;
+
+
+git reset 
+--soft  --pega as modificações e mata o commit que fez, esperando pra ser commitado de novo
+--mixed --volta as modificaçoes pra antes do staged
+--hard  --mata tudo que foi feito do commit 
+
+git reset --soft (numero da hash do commit antes do ultimo, pegando no log)
+dando um git status de novo, pode ser visto o arquivo retornado para pronto para commitar novamente, a partir do penultimo commit dado
+
+git reset --mixed hash 
+dando um git status de novo, pode ser visto o arquivo retornado para antes do staged 
+dando um git diff, pode ser visto o arquivo antes do commit e apontando as modificações antes de subir novamente 
+
+git reset --hard hash 
+dando um git log o commit anterior sumiu
+dando um git status aponta que nao tem nada pra tratar 
+Somente utilizar se estiver no repositorio como ultima opção (pra nao atrapalhar o historico) 
+
+
+
+
+
 
