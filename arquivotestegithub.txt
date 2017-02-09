@@ -721,6 +721,18 @@ Somente utilizar se estiver no repositorio como ultima opção (pra nao atrapalh
 
 
 
+git push origin master       -- Enviando modificações para o repositorio remoto que ja estao para commit (colocando como parametro primeiro pra onde quer ir de onde esta, origin master)
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 933 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/rickstkb/github-course.git
+   ad5f362..5e11296  master -> master
+
+
+
 
 
 
