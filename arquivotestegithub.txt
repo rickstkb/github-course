@@ -734,5 +734,41 @@ To https://github.com/rickstkb/github-course.git
 
 
 
+clonando um repositorio e apontando dentro do vscode
+vscode com open folder é possivel visualizar o local na maquina onde os projetos do git estao armazenado nesse caso no usuario
+
+User@Home MINGW32 ~
+$ git clone https://github.com/rickstkb/github-course.git github-course-clone
+Cloning into 'github-course-clone'...
+remote: Counting objects: 24, done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 24 (delta 6), reused 24 (delta 6), pack-reused 0
+Unpacking objects: 100% (24/24), done.
+
+User@Home MINGW32 ~
+$ ls
+'Ambiente de Impressão'@  Desktop/                Links/              NTUSER.DAT{2ac45f92-d673-11e1-aab1-001ec9fe8e5e}.TM.blf                                       Searches/
+'Ambiente de Rede'@       Documents/              'Menu Iniciar'@     NTUSER.DAT{2ac45f92-d673-11e1-aab1-001ec9fe8e5e}.TMContainer00000000000000000001.regtrans-ms  SendTo@
+AppData/                  Downloads/              'Meus Documentos'@  NTUSER.DAT{2ac45f92-d673-11e1-aab1-001ec9fe8e5e}.TMContainer00000000000000000002.regtrans-ms  Tracing/
+'Application Data'/       Favorites/              Modelos@            ntuser.ini                                                                                    Videos/
+'Configurações Locais'@   git-course/             Music/              Oracle/                                                                                       workspace/
+Contacts/                 github-course-clone/    NTUSER.DAT          Pictures/
+Cookies@                  'Google Drive'/         ntuser.dat.LOG1     Recent@
+'Dados de Aplicativos'@   IntelGraphicsProfiles/  ntuser.dat.LOG2     'Saved Games'/
+
+User@Home MINGW32 ~
+$ cd git
+git-course/          github-course-clone/
+
+User@Home MINGW32 ~
+$ cd github-course-clone/
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ ls
+arquivotestegithub.txt
+
+
+
+
 
 
