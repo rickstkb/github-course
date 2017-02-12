@@ -767,6 +767,52 @@ User@Home MINGW32 ~/github-course-clone (master)
 $ ls
 arquivotestegithub.txt
 
+User@Home MINGW32 ~/github-course-clone (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arquivotestegithub.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git commit -am "Sobre clonar um repositorio remoto do github pra maquina local"
+[master 35db9c2] Sobre clonar um repositorio remoto do github pra maquina local
+ 1 file changed, 36 insertions(+)
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git remote add origin git@github.com:rickstkb/github-course.git
+fatal: remote origin already exists.
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.04 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/rickstkb/github-course.git
+   3d9bbcc..35db9c2  master -> master
+
+
+
+Fazendo um fork é possivel fazer um clone do projeto, modificar e enviar de volta para o dono do projeto com o objetivo de fazer contribuições e publicar em um repositorio q n é nosso
+
+No caso se eu fosse republicar essa pasta que baixei, no meu repositorio, so o clone ja basta
+
+O fork é feito dentro do proprio github
 
 
 
