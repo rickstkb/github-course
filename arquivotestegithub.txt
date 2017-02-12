@@ -1,0 +1,825 @@
+teste no github etapa untracked files
+
+primeira modificaçao apos o primeiro add
+
+Logo abaixo, irei colocar toda a sequencia do que foi estudado no curso ate agora. 
+
+-- Até a parte "O ciclo de vida dos status e seus arquivos, tive todos os passos abaixo no bash";
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config --global user.name "Henrique Trindade"
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config --global user.email "rickstkb@gmail.com"
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config --global core.editor sublime
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config user.name
+Henrique Trindade
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config user.email
+rickstkb@gmail.com
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+credential.helper=manager
+difftool.usebuiltin=true
+user.name=Henrique Trindade
+user.email=rickstkb@gmail.com
+core.editor=sublime
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ mkdir git-course
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ cd git-course/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course
+$ git init
+Initialized empty Git repository in C:/Users/h.trindade/git-course/.git/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ C:/Users/h.trindade/git-course/.git/
+bash: C:/Users/h.trindade/git-course/.git/: Is a directory
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ ls -la
+total 16
+drwxr-xr-x 1 h.trindade 1049089 0 fev  6 19:01 ./
+drwxr-xr-x 1 h.trindade 1049089 0 fev  6 19:00 ../
+drwxr-xr-x 1 h.trindade 1049089 0 fev  6 19:01 .git/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ cd .git/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course/.git (GIT_DIR!)
+$ ls
+config  description  HEAD  hooks/  info/  objects/  refs/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course/.git (GIT_DIR!)
+$ cd..
+bash: cd..: command not found
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course/.git (GIT_DIR!)
+$ cd
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ dir
+Ambiente\ de\ impressão
+Ambiente\ de\ rede
+AppData
+Application\ Data
+casadocodigo
+Configurações\ locais
+Contacts
+Cookies
+Dados\ de\ aplicativos
+Desktop
+Documents
+Downloads
+Dropbox
+Evernote
+Favorites
+git-course
+Google\ Drive
+Links
+Menu\ Iniciar
+Meus\ documentos
+Modelos
+Music
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001                                                                                                                .regtrans-ms
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002                                                                                                                .regtrans-ms
+ntuser.ini
+ntuser.pol
+Pictures
+Recent
+Roaming
+Saved\ Games
+Searches
+SendTo
+Tracing
+Videos
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~
+$ cd git-course/
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .vscode/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ vscode teste.md
+bash: vscode: command not found
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git config --global core.editor vscode
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ vscode teste.md
+bash: vscode: command not found
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ vscode readme.md
+bash: vscode: command not found
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .vscode/
+        arquivotestegithub.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git add arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arquivotestegithub.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .vscode/
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arquivotestegithub.txt
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arquivotestegithub.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arquivotestegithub.txt
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git add arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arquivotestegithub.txt
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -m "Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt"                                                                          [master (root-commit) 5b33d5a] Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+ 1 file changed, 4 insertions(+)
+ create mode 100644 arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arquivotestegithub.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git add arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   arquivotestegithub.txt
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -m "Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit"
+[master f038899] Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+ 1 file changed, 2 insertions(+)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git add arquivotestegithub.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -m "Subindo td que fiz ate agora"
+[master 9927363] Subindo td que fiz ate agora
+ 1 file changed, 267 insertions(+)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin git@github.com:
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin git@github.com:rickstkb/github-course.git
+fatal: remote origin already exists.
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote remove origin
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin git@github.com:rickstkb/github-course.git
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote
+origin
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote -v
+origin  git@github.com:rickstkb/github-course.git (fetch)
+origin  git@github.com:rickstkb/github-course.git (push)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git push -u origin master
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remove origin
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+        remote
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote remove origin
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote -v
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin https://github.com/rickstkb/github-course.git
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git remote add origin https://github.com/rickstkb/github-course.git
+fatal: remote origin already exists.
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git push -u origin master
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.55 KiB | 0 bytes/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+Branch master set up to track remote branch master from origin.
+To https://github.com/rickstkb/github-course.git
+ * [new branch]      master -> master
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arquivotestegithub.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -am "Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add"
+[master fae7ad1] Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+ 1 file changed, 80 insertions(+), 1 deletion(-)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git log
+commit fae7ad1e9a02105510f17fc0a4acb64683e88bfe
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:28:07 2017 -0200
+
+    Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+
+commit 992736350a57a43c28ec4d049a410b4c2b30af56
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:09:51 2017 -0200
+
+    Subindo td que fiz ate agora
+
+commit f038899138813e4a722a92af6eba93e65cf68139
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:00:34 2017 -0200
+
+    Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+
+commit 5b33d5ac3d1e1991edb4029d4227e639ba3a8ecb
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 19:54:25 2017 -0200
+
+    Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.16 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/rickstkb/github-course.git
+   9927363..fae7ad1  master -> master
+
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git log
+commit fae7ad1e9a02105510f17fc0a4acb64683e88bfe
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:28:07 2017 -0200
+
+    Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+
+commit 992736350a57a43c28ec4d049a410b4c2b30af56
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:09:51 2017 -0200
+
+    Subindo td que fiz ate agora
+
+commit f038899138813e4a722a92af6eba93e65cf68139
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:00:34 2017 -0200
+
+    Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+
+commit 5b33d5ac3d1e1991edb4029d4227e639ba3a8ecb
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 19:54:25 2017 -0200
+
+    Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.16 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/rickstkb/github-course.git
+   9927363..fae7ad1  master -> master
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git commit -am "Enviando ultimas modificaçoes do arq no repositorio"
+[master fbda397] Enviando ultimas modificaçoes do arq no repositorio
+ 1 file changed, 55 insertions(+)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 894 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/rickstkb/github-course.git
+   fae7ad1..fbda397  master -> master
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git log
+commit fbda397631ba139051dfb3154b112da495d7010b
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:34:56 2017 -0200
+
+    Enviando ultimas modificaçoes do arq no repositorio
+
+commit fae7ad1e9a02105510f17fc0a4acb64683e88bfe
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:28:07 2017 -0200
+
+    Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+
+commit 992736350a57a43c28ec4d049a410b4c2b30af56
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:09:51 2017 -0200
+
+    Subindo td que fiz ate agora
+
+commit f038899138813e4a722a92af6eba93e65cf68139
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:00:34 2017 -0200
+
+    Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+
+commit 5b33d5ac3d1e1991edb4029d4227e639ba3a8ecb
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 19:54:25 2017 -0200
+
+    Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git log --decorate
+commit fbda397631ba139051dfb3154b112da495d7010b (HEAD -> master, origin/master)
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:34:56 2017 -0200
+
+    Enviando ultimas modificaçoes do arq no repositorio
+
+commit fae7ad1e9a02105510f17fc0a4acb64683e88bfe
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:28:07 2017 -0200
+
+    Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+
+commit 992736350a57a43c28ec4d049a410b4c2b30af56
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:09:51 2017 -0200
+
+    Subindo td que fiz ate agora
+
+commit f038899138813e4a722a92af6eba93e65cf68139
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:00:34 2017 -0200
+
+    Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+
+commit 5b33d5ac3d1e1991edb4029d4227e639ba3a8ecb
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 19:54:25 2017 -0200
+
+    Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git log --author="Henrique"
+commit fbda397631ba139051dfb3154b112da495d7010b
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:34:56 2017 -0200
+
+    Enviando ultimas modificaçoes do arq no repositorio
+
+commit fae7ad1e9a02105510f17fc0a4acb64683e88bfe
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:28:07 2017 -0200
+
+    Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+
+commit 992736350a57a43c28ec4d049a410b4c2b30af56
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:09:51 2017 -0200
+
+    Subindo td que fiz ate agora
+
+commit f038899138813e4a722a92af6eba93e65cf68139
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:00:34 2017 -0200
+
+    Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+
+commit 5b33d5ac3d1e1991edb4029d4227e639ba3a8ecb
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 19:54:25 2017 -0200
+
+    Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git log --author="John"
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git shortlog
+Henrique Trindade (5):
+      Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+      Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+      Subindo td que fiz ate agora
+      Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+      Enviando ultimas modificaçoes do arq no repositorio
+
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git shortlog sn
+fatal: ambiguous argument 'sn': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git shortlog -sn
+     5  Henrique Trindade
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git log --graph
+* commit fbda397631ba139051dfb3154b112da495d7010b
+| Author: Henrique Trindade <rickstkb@gmail.com>
+| Date:   Mon Feb 6 20:34:56 2017 -0200
+|
+|     Enviando ultimas modificaçoes do arq no repositorio
+|
+* commit fae7ad1e9a02105510f17fc0a4acb64683e88bfe
+| Author: Henrique Trindade <rickstkb@gmail.com>
+| Date:   Mon Feb 6 20:28:07 2017 -0200
+|
+|     Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
+|
+* commit 992736350a57a43c28ec4d049a410b4c2b30af56
+| Author: Henrique Trindade <rickstkb@gmail.com>
+| Date:   Mon Feb 6 20:09:51 2017 -0200
+|
+|     Subindo td que fiz ate agora
+|
+* commit f038899138813e4a722a92af6eba93e65cf68139
+| Author: Henrique Trindade <rickstkb@gmail.com>
+| Date:   Mon Feb 6 20:00:34 2017 -0200
+|
+|     Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
+|
+* commit 5b33d5ac3d1e1991edb4029d4227e639ba3a8ecb
+  Author: Henrique Trindade <rickstkb@gmail.com>
+  Date:   Mon Feb 6 19:54:25 2017 -0200
+
+      Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git show fbda397631ba139051dfb3154b112da495d7010b
+commit fbda397631ba139051dfb3154b112da495d7010b
+Author: Henrique Trindade <rickstkb@gmail.com>
+Date:   Mon Feb 6 20:34:56 2017 -0200
+
+    Enviando ultimas modificaçoes do arq no repositorio
+
+diff --git a/arquivotestegithub.txt b/arquivotestegithub.txt
+index 73855b5..1a7bbc5 100644
+--- a/arquivotestegithub.txt
++++ b/arquivotestegithub.txt
+@@ -350,3 +350,58 @@ To https://github.com/rickstkb/github-course.git
+  * [new branch]      master -> master
+
+
++h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
++$ git status
++On branch master
++Your branch is up-to-date with 'origin/master'.
++Changes not staged for commit:
++  (use "git add <file>..." to update what will be committed)
++  (use "git checkout -- <file>..." to discard changes in working directory)
++
++        modified:   arquivotestegithub.txt
++
++no changes added to commit (use "git add" and/or "git commit -a")
++
++h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
++$ git commit -am "Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add"
++[master fae7ad1] Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
++ 1 file changed, 80 insertions(+), 1 deletion(-)
++
++h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
++$ git log
++commit fae7ad1e9a02105510f17fc0a4acb64683e88bfe
++Author: Henrique Trindade <rickstkb@gmail.com>
++Date:   Mon Feb 6 20:28:07 2017 -0200
++
++    Enviando modificaçoes do arquivo ja no salvos em nuvem, direto ao repositorio remoto sem precisar de da um add
++
++commit 992736350a57a43c28ec4d049a410b4c2b30af56
++Author: Henrique Trindade <rickstkb@gmail.com>
++Date:   Mon Feb 6 20:09:51 2017 -0200
++
++    Subindo td que fiz ate agora
++
++commit f038899138813e4a722a92af6eba93e65cf68139
++Author: Henrique Trindade <rickstkb@gmail.com>
++Date:   Mon Feb 6 20:00:34 2017 -0200
++
++    Agora fiz um commit snapshot com o que tem dentro da pasta porem com alterações no arquivo ja prontas em staged pra dar o commit
++
++commit 5b33d5ac3d1e1991edb4029d4227e639ba3a8ecb
++Author: Henrique Trindade <rickstkb@gmail.com>
++Date:   Mon Feb 6 19:54:25 2017 -0200
++
++    Fiz um snapshot de td que tem na pasta pra gerar um commit nesse caso adicionando o arquivoteste.txt
++
++h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
++$ git push origin master
++Counting objects: 3, done.
++Delta compression using up to 4 threads.
++Compressing objects: 100% (3/3), done.
++Writing objects: 100% (3/3), 1.16 KiB | 0 bytes/s, done.
++Total 3 (delta 1), reused 0 (delta 0)
++remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
++To https://github.com/rickstkb/github-course.git
++   9927363..fae7ad1  master -> master
++
++
+(END)
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git diff
+
+h.trindade@CNOVA_NOTE149 MINGW64 ~/git-course (master)
+$ git diff --name-only
+
+
+git checkout nome do arquivo   -- desfaz uma modificaçao antes de da um commit e subir a modificação no repositorio remoto
+
+Nesse momento quando for dado um git diff não é apontada nenhuma modificaçao nos arquivos 
+
+git add nome do arquivo -- pra passar o arquivo pra staged 
+
+
+git reset HEAD nome do arquivo -- tirando da fila do staged pra commit em seguida 
+
+git commit -am "mensagem do commit" -- subir o commit direto no repositorio sem passar por algumas etapas (staged) etc;
+
+
+git reset 
+--soft  --pega as modificações e mata o commit que fez, esperando pra ser commitado de novo
+--mixed --volta as modificaçoes pra antes do staged
+--hard  --mata tudo que foi feito do commit 
+
+git reset --soft (numero da hash do commit antes do ultimo, pegando no log)
+dando um git status de novo, pode ser visto o arquivo retornado para pronto para commitar novamente, a partir do penultimo commit dado
+
+git reset --mixed hash 
+dando um git status de novo, pode ser visto o arquivo retornado para antes do staged 
+dando um git diff, pode ser visto o arquivo antes do commit e apontando as modificações antes de subir novamente 
+
+git reset --hard hash 
+dando um git log o commit anterior sumiu
+dando um git status aponta que nao tem nada pra tratar 
+Somente utilizar se estiver no repositorio como ultima opção (pra nao atrapalhar o historico) 
+
+
+
+git push origin master       -- Enviando modificações para o repositorio remoto que ja estao para commit (colocando como parametro primeiro pra onde quer ir de onde esta, origin master)
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 933 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/rickstkb/github-course.git
+   ad5f362..5e11296  master -> master
+
+
+
+
+clonando um repositorio e apontando dentro do vscode
+vscode com open folder é possivel visualizar o local na maquina onde os projetos do git estao armazenado nesse caso no usuario
+
+User@Home MINGW32 ~
+$ git clone https://github.com/rickstkb/github-course.git github-course-clone
+Cloning into 'github-course-clone'...
+remote: Counting objects: 24, done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 24 (delta 6), reused 24 (delta 6), pack-reused 0
+Unpacking objects: 100% (24/24), done.
+
+User@Home MINGW32 ~
+$ ls
+'Ambiente de Impressão'@  Desktop/                Links/              NTUSER.DAT{2ac45f92-d673-11e1-aab1-001ec9fe8e5e}.TM.blf                                       Searches/
+'Ambiente de Rede'@       Documents/              'Menu Iniciar'@     NTUSER.DAT{2ac45f92-d673-11e1-aab1-001ec9fe8e5e}.TMContainer00000000000000000001.regtrans-ms  SendTo@
+AppData/                  Downloads/              'Meus Documentos'@  NTUSER.DAT{2ac45f92-d673-11e1-aab1-001ec9fe8e5e}.TMContainer00000000000000000002.regtrans-ms  Tracing/
+'Application Data'/       Favorites/              Modelos@            ntuser.ini                                                                                    Videos/
+'Configurações Locais'@   git-course/             Music/              Oracle/                                                                                       workspace/
+Contacts/                 github-course-clone/    NTUSER.DAT          Pictures/
+Cookies@                  'Google Drive'/         ntuser.dat.LOG1     Recent@
+'Dados de Aplicativos'@   IntelGraphicsProfiles/  ntuser.dat.LOG2     'Saved Games'/
+
+User@Home MINGW32 ~
+$ cd git
+git-course/          github-course-clone/
+
+User@Home MINGW32 ~
+$ cd github-course-clone/
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ ls
+arquivotestegithub.txt
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arquivotestegithub.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git commit -am "Sobre clonar um repositorio remoto do github pra maquina local"
+[master 35db9c2] Sobre clonar um repositorio remoto do github pra maquina local
+ 1 file changed, 36 insertions(+)
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git remote add origin git@github.com:rickstkb/github-course.git
+fatal: remote origin already exists.
+
+User@Home MINGW32 ~/github-course-clone (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.04 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/rickstkb/github-course.git
+   3d9bbcc..35db9c2  master -> master
+
+
+
+Fazendo um fork é possivel fazer um clone do projeto, modificar e enviar de volta para o dono do projeto com o objetivo de fazer contribuições e publicar em um repositorio q n é nosso
+
+No caso se eu fosse republicar essa pasta que baixei, no meu repositorio, so o clone ja basta
+
+O fork é feito dentro do proprio github
+
+
+Ao fazer um clone em uma mesma pasta com um mesmo nome, acontece uma sobrescrita e indiretamente um update
+
+O clone com outro nome é so pra n acontecer uma sobrescrita indesejada
+
+
+
+
+
