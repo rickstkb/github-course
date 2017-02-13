@@ -819,6 +819,38 @@ Ao fazer um clone em uma mesma pasta com um mesmo nome, acontece uma sobrescrita
 
 O clone com outro nome é so pra n acontecer uma sobrescrita indesejada
 
+No lugar desse comando clone, pode ser usado o git pull, pra poder fazer uma atualização de todos os arquivos do projeto que estiverem locais na maquina
+
+
+Falando sobre Branches:
+
+- Ramificações do projeto;
+
+
+Criando uma Branch:
+git checkout -b (nome desejado pra branch); // Cria e ja entra na brach 
+
+Ai digitar git branch, são apontadas quais branches existentes, e com o asterisco na frente, qual que estou no momento
+
+
+Movendo ou Deletando Branches:
+git branch // Lista todas 
+
+Pra ir, navegar pra outra 
+git checkout (nome do branch desejado)
+
+
+Apagar Branch: 
+git branch -D (nome da branch)
+
+
+Unindo modificações feitas entre Branches (Merge):
+Rebase (Move o commit da branch para o final da fila de commits, ligando ao commit da master) 
+Ou Merge (Forma diamante com um novo commit une branches);
+
+git pull --rebase
+
+rebase 
 
 
 
