@@ -982,6 +982,28 @@ git push origin master --tags  //sobe todas as tags novas que ainda não foram s
 
 
 
+Git Revert:
+
+Modifica arquivo 
+Commita
+git show (hash do commit)
+git log     // pra ver todos os commits
+pega o hash do commit que deu problema em produção 
+git revert + hash do commit que deu problema em produção 
+Apaga o que foi feito, mas mantem o commit anterior efetivo, não perde tudo que foi feito, reverte apenas as ultimas mudanças, nao perdendo do historico as ultimas mudanças que foram feitas.
+
+
+Apagando tags e Branches do Repositorio Remoto:
+git push origin :(tag com a versao que quer ser apagada)
+git push origin :(nome da branch que quer apagar)
+
+Apagando local // nao sobe pro repositorio automaticamente: 
+git tag -d (com a tag da versao que se quer apagar)
+git branch -d 
+
+
+
+
 
 
 
