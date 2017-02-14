@@ -940,5 +940,50 @@ Dando um rebase:
 git rebase (nome da branch rebase que vai ser unida com essa master) // Aplicando a modificação para o inicio da lista (de cima pra baixo) 
 
 
+Git stash:
+// Cria um arquivo separado pra fazer uso quando solicitado, quase como um bloco de notas pra uso em tempo real, guarda na memoria
+
+Modifica um arquivo rapidamente, e guarda em WIP pra uso rapidamente ao inves de criar uma branch e arquivos novos;
+
+Após modificar um arquivo, digita "git stash" 
+
+Cria um novo branch, 
+
+git stash clear // limpa 
+git stash list // mostra todos que tem em um vetor 
+
+
+
+Criando Alias (Atalhos pra comandos):
+git config --global alias.(nome que se quer) e qual o nome do comando original
+
+Exemplo: 
+git config --global alias.s status
+
+
+
+Criando tags para os commits:
+git tag -a versão (1.0.0 exemplo) -m "Anotação"    // Como uma notação por exemplo, 
+
+
+Subindo tags no repositorio:
+git push origin master --tags 
+
+// No chrome, release muda e a tag mostrada é a versão
+
+Alterando o arquivo que teve a primeira versão, cria-se uma nova tag:
+git tag -a 1.0.1 -m "mensagem desejada"
+
+
+Vendo todas as tags geradas:
+git tag
+
+git push origin master --tags  //sobe todas as tags novas que ainda não foram salvas no repositorio, pode ser adicionado o release notes no repositorio etc
+
+
+
+
+
+
 
 
